@@ -5,7 +5,7 @@ from gtts import gTTS
 import os
 
 
-Token="1440147560:AAEPQcO5676me59Eix1R7xMG1Hd9ka_Wazc"
+Token="<Your Token>"
 bot=TeleBot(Token)
 
 #When user sends 'start'
@@ -25,7 +25,6 @@ def send_voice_msg(msg):
     translator = Translator()
     text=msg.text
     translation = translator.translate(text=text, dest='en')
-    #print(f"{translation.origin} ({translation.src}) --> {translation.text} ({translation.dest})")
 
     speech = msg.text
     if speech != translation.text:
